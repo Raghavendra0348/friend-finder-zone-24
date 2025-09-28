@@ -14,7 +14,51 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      user_results: {
+        Row: {
+          branch: string
+          calculated_value: number
+          created_at: string
+          grade_data: Json
+          id: string
+          result_status: string
+          result_type: string
+          semester: string
+          session_id: string | null
+          timestamp: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          branch: string
+          calculated_value: number
+          created_at?: string
+          grade_data: Json
+          id?: string
+          result_status: string
+          result_type: string
+          semester: string
+          session_id?: string | null
+          timestamp?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          branch?: string
+          calculated_value?: number
+          created_at?: string
+          grade_data?: Json
+          id?: string
+          result_status?: string
+          result_type?: string
+          semester?: string
+          session_id?: string | null
+          timestamp?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
